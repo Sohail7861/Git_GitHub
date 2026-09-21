@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with Mosaic Studio about your next digital project.">
-    <title>Contact | Mosaic Studio</title>
+    <meta name="description" content="Learn more about Mosaic Studio and our approach to digital design.">
+    <title>About | Mosaic Studio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -22,26 +22,25 @@
         .nav-button, .button { display: inline-block; padding: 11px 18px; border-radius: 4px; background: var(--navy); color: white; font-size: 14px; font-weight: 700; transition: transform .2s, background .2s; }
         .nav-button:hover, .button:hover { background: var(--orange); transform: translateY(-2px); }
         h1, h2 { margin: 0; font-family: "Space Grotesk", sans-serif; letter-spacing: -.06em; line-height: 1.04; }
-        .contact-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; padding: 95px 0 115px; }
+        .about-hero { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; align-items: center; padding: 95px 0 80px; }
         .eyebrow, .section-label { color: var(--orange); font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
         h1 { margin: 18px 0 22px; font-size: clamp(3.5rem, 7vw, 6.5rem); }
-        .intro { max-width: 370px; color: var(--muted); font-size: 18px; }
-        .details { margin-top: 55px; padding-top: 22px; border-top: 3px solid var(--navy); }
-        .details p { margin: 10px 0 0; color: var(--muted); }
-        .details a { color: var(--orange); font-weight: 700; }
-        form { padding: 38px; background: var(--mint); }
-        label { display: block; margin-bottom: 7px; font-size: 14px; font-weight: 700; }
-        input, textarea { width: 100%; margin-bottom: 22px; padding: 14px 0; border: 0; border-bottom: 1px solid #8eb4ad; outline: 0; background: transparent; color: var(--navy); font: inherit; }
-        input:focus, textarea:focus { border-color: var(--orange); }
-        textarea { min-height: 105px; resize: vertical; }
-        form .button { margin-top: 2px; border: 0; cursor: pointer; }
+        .intro { max-width: 390px; color: var(--muted); font-size: 18px; }
+        .about-art { min-height: 360px; padding: 32px; background: var(--mint); }
+        .about-art-inner { display: flex; align-items: flex-end; justify-content: flex-end; min-height: 296px; padding: 25px; background: var(--orange); }
+        .about-art p { max-width: 220px; margin: 0; color: white; font: 700 27px/1.05 "Space Grotesk", sans-serif; }
+        .values { padding: 70px 0 95px; border-top: 1px solid #dce5e8; }
+        .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 35px; }
+        .value { padding-top: 22px; border-top: 3px solid var(--navy); }
+        .value h2 { margin: 15px 0 10px; font-size: 28px; }
+        .value p { margin: 0; color: var(--muted); }
         footer { display: flex; justify-content: space-between; padding: 22px 0; border-top: 1px solid #dce5e8; color: var(--muted); font-size: 13px; }
         @media (max-width: 720px) {
             .wrap { width: min(100% - 32px, 540px); }
             .nav-links { display: none; }
-            .contact-layout { grid-template-columns: 1fr; gap: 45px; padding: 58px 0 70px; }
+            .about-hero { grid-template-columns: 1fr; gap: 45px; padding: 58px 0 70px; }
             h1 { font-size: clamp(3.3rem, 16vw, 5rem); }
-            form { padding: 25px 22px; }
+            .value-grid { grid-template-columns: 1fr; gap: 28px; }
             footer { display: block; }
             footer span { display: block; margin-bottom: 8px; }
         }
@@ -52,32 +51,30 @@
         <nav>
             <a class="logo" href="../index.html"><span class="logo-mark">M</span> Mosaic Studio</a>
             <div class="nav-links"><a href="../index.html#services">Services</a><a href="about.html">About</a><a href="navcontact.html">Contact</a></div>
-            <a class="nav-button" href="../index.html">Back home <span aria-hidden="true">↗</span></a>
+            <a class="nav-button" href="navcontact.html">Let's talk <span aria-hidden="true">↗</span></a>
         </nav>
     </header>
 
-    <main class="wrap contact-layout">
-        <section>
-            <div class="eyebrow">Start something good</div>
-            <h1>Let's make it real.</h1>
-            <p class="intro">Have a project in mind, or just a question? Tell us a little about it and we will get back to you within two working days.</p>
-            <div class="details">
-                <div class="section-label">Prefer email?</div>
-                <p><a href="mailto:hello@mosaic.studio">hello@mosaic.studio</a><br>Usually online Monday to Friday.</p>
+    <main>
+        <section class="wrap about-hero">
+            <div>
+                <div class="eyebrow">A little about us</div>
+                <h1>Good work starts with good questions.</h1>
+                <p class="intro">Mosaic Studio is an independent design practice helping thoughtful businesses turn their ideas into clear, memorable digital experiences.</p>
             </div>
+            <div class="about-art" aria-label="Orange and mint abstract artwork"><div class="about-art-inner"><p>Small team.<br>Big attention<br>to detail.</p></div></div>
         </section>
 
-        <form action="mailto:hello@mosaic.studio" method="post" enctype="text/plain">
-            <label for="name">Your name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
-            <label for="email">Email address</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-            <label for="message">Tell us about your project</label>
-            <textarea id="message" name="message" required></textarea>
-            <button class="button" type="submit">Send message <span aria-hidden="true">↗</span></button>
-        </form>
+        <section class="wrap values">
+            <div class="section-label">How we work</div>
+            <div class="value-grid">
+                <article class="value"><div class="section-label">01</div><h2>Listen first</h2><p>We take time to understand your goals, your audience, and what makes your business different.</p></article>
+                <article class="value"><div class="section-label">02</div><h2>Keep it clear</h2><p>We turn complex ideas into simple systems that are easy to use, remember, and grow with.</p></article>
+                <article class="value"><div class="section-label">03</div><h2>Make it matter</h2><p>Every choice has a purpose, from the first sketch to the final detail on screen.</p></article>
+            </div>
+        </section>
     </main>
 
-    <footer class="wrap"><span>© 2024 Mosaic Studio</span><span>Designing with intention.</span></footer>
+    <footer class="wrap"><span>© 2024 Mosaic Studio</span><span><a href="../index.html">Back to home</a></span></footer>
 </body>
 </html>
